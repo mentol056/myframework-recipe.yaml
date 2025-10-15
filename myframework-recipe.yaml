@@ -38,13 +38,14 @@ tasks:
   # 4. KONFIGURÁLÁS
   # ======================
   - action: write_file
-    path: ./server.cfg
-    content: |
-      # ======================================
-      # MyFramework - Egyedi FiveM Server
-      # ======================================
-      endpoint_add_tcp "0.0.0.0:30120"
-      endpoint_add_udp "0.0.0.0:30120"
+  path: ./server.cfg
+  content: |
+    # MyFramework auto-generated server.cfg
+    endpoint_add_tcp "0.0.0.0:30120"
+    endpoint_add_udp "0.0.0.0:30120"
+    sv_hostname "MyFramework RP"
+    ensure myframework
+
 
       sv_hostname "MyFramework Roleplay Server"
       sv_maxclients 64
@@ -104,3 +105,5 @@ tasks:
       - Alap resource-ok futnak
       - Adatbázis kapcsolat készen
       Most már elindíthatod a szervert a txAdminban.
+
+      
